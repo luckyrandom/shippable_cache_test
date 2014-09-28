@@ -11,7 +11,7 @@ python:
   
 
 # Make folders for the reports
-before_script:
+before_install:
   - mkdir -p shippable/cache
   - ls shippable/cache
   - cat shippable/pyton_version
