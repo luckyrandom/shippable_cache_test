@@ -1,0 +1,23 @@
+language: python
+build_image: shippableimages/ubuntu1204_python
+cache: true
+python:
+  - 2.6
+  - 2.7
+  - 3.2
+  - 3.3
+  - 3.4
+  - pypy
+  
+
+# Make folders for the reports
+before_script:
+  - mkdir -p shippable/cache
+  - ls shippable/cache
+  - cat shippable/pyton_version
+  - echo $TRAVIS_PYTHON_VERSION >shippable/pyton_version
+  - cat shippable/pyton_version
+  - echo $SHIPPABLE_BUILD_NUMBER
+
+script:
+  - bash test.sh
