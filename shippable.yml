@@ -11,13 +11,13 @@ before_install:
   - pwd
   - ls -l -a
   - cat cached || echo "File not exist"
-  - echo "Cache worked" >cached
+  - echo $SHIPPABLE_BUILD_NUMBER >cached
   - cat cached
   
   
 install:
   - cat ~/cached || echo "File not exist"
-  - echo "Cache worked" >~/cached
+  - echo $SHIPPABLE_BUILD_NUMBER >~/cached
   - cat ~/cached
   - apt-get update -qq
   - apt-get install -y --no-install-recommends texlive-latex-base r-base
