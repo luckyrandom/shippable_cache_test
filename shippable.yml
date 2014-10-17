@@ -1,13 +1,9 @@
 language: python
 build_image: shippableimages/ubuntu1204_python
-cache: true
+cache: false
 python:
   - 2.6
   - 2.7
-  - 3.2
-  - 3.3
-  - 3.4
-  - pypy
   
 
 # Make folders for the reports
