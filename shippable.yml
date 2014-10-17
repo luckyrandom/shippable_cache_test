@@ -8,11 +8,11 @@ python:
 
 # Make folders for the reports
 before_install:
-  - mkdir -p shippable/cache
-  - ls shippable/cache
-  - cat shippable/pyton_version || echo "File not exist"
-  - echo $TRAVIS_PYTHON_VERSION >shippable/pyton_version
-  - cat shippable/pyton_version
+  - mkdir -p ~/shippable/cache
+  - ls ~/shippable/cache
+  - cat ~/shippable/pyton_version || echo "File not exist"
+  - echo $TRAVIS_PYTHON_VERSION >~/shippable/pyton_version
+  - cat ~/shippable/pyton_version
   - echo $SHIPPABLE_BUILD_NUMBER
 
 install:
