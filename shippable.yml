@@ -20,13 +20,8 @@ before_install:
   - echo $SHIPPABLE_BUILD_NUMBER
 
 install:
-  - add-apt-repository -y "ppa:texlive-backports/ppa"
   - apt-get update -qq
-  - apt-get install --no-install-recommends \
-            texlive-base texlive-latex-base texlive-generic-recommended \
-            texlive-fonts-recommended texlive-fonts-extra \
-            texlive-extra-utils texlive-latex-recommended texlive-latex-extra \
-            texinfo lmodern
-  
+  - apt-get install -y --no-install-recommends texlive-latex-base
+              
 script:
   - bash test.sh
