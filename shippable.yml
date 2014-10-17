@@ -19,7 +19,7 @@ install:
   - cat ~/cached || echo "File not exist"
   - echo "Cache worked" >~/cached
   - cat ~/cached
-    - apt-get update -qq
+  - apt-get update -qq
   - apt-get install -y --no-install-recommends texlive-latex-base
               
 script:
