@@ -1,6 +1,6 @@
 language: python
 build_image: shippableimages/ubuntu1204_python
-cache: false
+cache: true
 python:
   - 2.6
   - 2.7
